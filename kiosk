@@ -16,7 +16,7 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/$USER/.config/chr
 sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/$USER/.config/chromium/Default/Preferences
 
 chromium-browser --start-fullscreen --kiosk --incognito --noerrdialogs --disable-translate --no-first-run --fast --fast-start --disable-infobars --disable-features=TranslateUI --disk-cache-dir=/dev/null  --password-store=basic --disable-pinch --overscroll-history-navigation=disabled --disable-features=TouchpadOverscrollHistoryNavigation https://www.meteofrance.com/ &
-
+# midori -e Fullscreen https://www.meteofrance.com/ &
 
 # You can add additional web pages/tabs by adding to this list by separating each one with a space.
 # These lines run a very simple infinite while loop that uses xdotool to mimic pressing CTRL + Pgdn. Making Chromium switch to the next tab. “Next” is a alias for the “PG DN” key.
