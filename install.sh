@@ -13,3 +13,4 @@ echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx' >> /home/pi/.bash_profile
 
 # Launch commands when X starts
 cat kiosk >> /etc/xdg/openbox/autostart 
+
