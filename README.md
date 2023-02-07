@@ -15,6 +15,6 @@ chmod +x install.sh && ./install.sh
 ```
 raspi-config 
 ```
-go to 1 System Options -> S5 Boot / Auto Login -> B4 Console Autologin
+go to 1 System Options -> S5 Boot / Auto Login -> B2 Console Autologin
 
 ### reboot and enjoy
