@@ -10,4 +10,4 @@ apt autoremove -y
 
 echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx' >> /home/pi/.bash_profile
 
-cat kiosk.sh >> /etc/xdg/openbox/autostart 
+cat kiosk >> /etc/xdg/openbox/autostart 
