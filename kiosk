@@ -1,18 +1,35 @@
+# set the current xsession not to blank out the screensaver
 xset s noblank
+# disable the screensaver 
 xset s off
+# disables the entire “display power management system” meaning that the desktop interface should never blank out the screen.
 xset -dpms
 
+# Allow quitting the X server with CTRL-ATL-Backspace
 setxkbmap -option terminate:ctrl_alt_bksp
 
-
+# hide the mouse from the display whenever it has been idle for longer then 0.5 seconds and will remove it even if it is over the root background
 unclutter -idle 0.5 -root &
 
+# clear out any flags that would make the warning bar appear
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/$USER/.config/chromium/Default/Preferences
 sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/$USER/.config/chromium/Default/Preferences
 
 chromium-browser --start-fullscreen --kiosk --incognito --noerrdialogs --disable-translate --no-first-run --fast --fast-start --disable-infobars --disable-features=TranslateUI --disk-cache-dir=/dev/null  --password-store=basic --disable-pinch --overscroll-history-navigation=disabled --disable-features=TouchpadOverscrollHistoryNavigation https://www.meteofrance.com/ &
 
+
+# You can add additional web pages/tabs by adding to this list by separating each one with a space.
+# These lines run a very simple infinite while loop that uses xdotool to mimic pressing CTRL + Pgdn. Making Chromium switch to the next tab. “Next” is a alias for the “PG DN” key.
+
+
 # while true; do
 #   xdotool keydown ctrl+Next; xdotool keyup ctrl+Next;
 #   sleep 10
+# done
+
+# add a screen refresh, this may be important when you want to display live scores.
+
+# while true; do
+#   xdotool keydown ctrl+r; xdotool keyup ctrl+r;
+#   sleep 15
 # done
